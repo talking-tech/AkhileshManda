@@ -1,78 +1,89 @@
 html,
 body {
-  height: 100%;
+  top: 0;
+  left: 0;
+  top: 0;
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
 }
-body,
-input {
+
+body {
+  margin: 0;
+  padding: 0;
   font-family: "Montserrat";
 }
-body {
-  padding-top: 55px;
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
 }
-#intro {
+section {
+  /* Snap align start. */
+  scroll-snap-align: start;
+}
+
+.intro {
+  display: block;
   position: relative;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
+  background-image: url("https://i.imgur.com/28chzOK.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  font-size: 42px;
 }
-#intro::after {
+
+.intro::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
 }
-#intro .content img {
+.intro .content {
   display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 100%;
-  min-height: 100vh;
-  z-index: 2;
-}
-#intro .content {
-  text-align: center;
   position: relative;
-  background-image: url("https://imgur.com/a/fINYhuA.png");
-  top: 30%;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  z-index: 5;
-  color: #fff;
+  text-align: center;
+  color: rgb(175, 175, 175);
+  margin: auto;
+  width: 100%;
+  padding-top: 10%;
+  z-index: 3;
 }
-#intro .content h1 {
-  margin: 20px 0;
-  font-size: 4.5em;
-  font-weight: 300;
+
+.intro .content h1 {
+  margin: 10px 0;
+  font-size: 2em;
+  font-weight: 200;
 }
 #intro .content h2 {
   padding: 0;
   border: none;
 }
 #intro .content h3 {
-  font-size: 1.5em;
-  font-weight: 300;
+  font-size: 0.75em;
+  font-weight: 200;
 }
 #intro .content .socials {
-  padding: 35px 0;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 #intro .content .socials a {
-  color: #fff;
+  color: rgb(175, 175, 175);
   display: inline-block;
-  font-size: 1.2em;
-  padding: 10px;
-  width: 45px;
-  height: 45px;
+  font-size: 25px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   line-height: 1.25;
   border: 1px solid #fff;
   border-radius: 100%;
-  margin: 0 10px;
+  margin: 0 5px;
   transition: all 0.15s linear;
   transform: scale(1);
 }
@@ -84,9 +95,27 @@ body {
 section {
   margin-bottom: 25px;
 }
-section h2 {
-  text-align: center;
-  line-height: 1;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #ccf;
+
+.navbar-nav {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: justify;
+  position: relative;
+}
+
+.nav-item {
+  letter-spacing: 0.15em;
+  margin-left: 20px;
+  position: relative;
+}
+
+.about {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0 250px;
+  overflow: hidden;
+  color: white;
 }

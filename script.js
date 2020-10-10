@@ -1,10 +1,11 @@
-$(function () {
-    var roles = ["Student", "VITian", "Baller","Toastmaster","Reader","developer"];
-    var count = 0;
-    setInterval(() => {
-      $("#intro .content h2 span").fadeOut("fast", function () {
-        $(this).text(roles[count++ % roles.length]);
+$(document).ready(function(){
+  setInterval(swapRoles,1000);
+  var masterroles = ["Student", "VITian", "Baller","Toastmaster","Reader","Web Developer"]; 
+  var count = 0;
+  function swapRoles(){
+      $('.roles').fadeOut("fast", function(){
+        $(this).text(masterroles[count++ % masterroles.length]);
         $(this).fadeIn("fast");
       });
-    }, 1000);
-  });
+  };
+});
